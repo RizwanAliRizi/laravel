@@ -1,7 +1,6 @@
 <?php
 
 use Zizaco\Entrust\EntrustRole;
-
 return [
 
     /*
