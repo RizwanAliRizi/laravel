@@ -1,6 +1,6 @@
 <?php
 
-// use Zizaco\Entrust\EntrustRole;
+use Zizaco\Entrust\EntrustRole;
 
 return [
 
