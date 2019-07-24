@@ -20,9 +20,9 @@
 
     <VirtualHost *:80>
     ServerName newlaravelproject.com
-    DocumentRoot "C:/xampp/htdocs/models/public"
+    DocumentRoot "/var/www/html/models/public"
     ServerAlias *.newlaravelproject.com
-    <Directory "C:/xampp/htdocs/models/public"
+    <Directory "/var/www/html/models/public"
     AllowOverride All
     Require all granted 
     </Directory>
