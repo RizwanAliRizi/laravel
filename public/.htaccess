@@ -18,6 +18,18 @@
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
+    <VirtualHost *:80>
+
+    ServerName newlaravelproject.com
+    DocumentRoot "C:\xampp\htdocs\models\public"
+    ServerAlias *.newlaravelproject.com
+    <Directory "C:\xampp\htdocs\models\public">
+    AllowOverride All
+    Require all granted 
+    </Directory>
+
+    </VirtualHost>
+
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
