@@ -1,9 +1,17 @@
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
+<<<<<<< HEAD
      RewriteEngine on #inserted
      RewriteRule ^$ public/ [L]
      RewriteRule (.*) public/$1 [L] #endInserted
+=======
+        
+       RewriteEngine on
+     RewriteRule ^$ public/ [L]
+     RewriteRule (.*) public/$1 [L]
+     
+>>>>>>> b6e6b586904a549344ba67a0cf1ef7a592559216
     </IfModule>
 
 
