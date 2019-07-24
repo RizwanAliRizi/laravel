@@ -3,8 +3,15 @@
         Options -MultiViews -Indexes
     </IfModule>
 
+    ## Redirect to public folder
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
+</IfModule>
+
     RewriteEngine On
-    DirectoryIndex index.php
+    DirectoryIndex index.php #this trick
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
