@@ -19,11 +19,10 @@
     RewriteRule ^ %1 [L,R=301]
 
     <VirtualHost *:80>
-
     ServerName newlaravelproject.com
-    DocumentRoot "C:\xampp\htdocs\models\public"
+    DocumentRoot "C:/xampp/htdocs/models/public"
     ServerAlias *.newlaravelproject.com
-    <Directory "C:\xampp\htdocs\models\public">
+    <Directory "C:/xampp/htdocs/models/public"
     AllowOverride All
     Require all granted 
     </Directory>
