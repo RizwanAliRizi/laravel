@@ -58,5 +58,11 @@
         "optimize-autoloader": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "extra": {
+        "heroku": {
+            "framework": "silex",
+            "document-root": "public",
+            "index-document": "index.php"
+        }
 }
