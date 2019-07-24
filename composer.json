@@ -18,7 +18,8 @@
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^7.0",
+        "heroku/heroku-buildpack-php" : "dev-master"
     },
     "autoload": {
         "classmap": [
@@ -58,12 +59,6 @@
         "optimize-autoloader": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "extra": {
-        "heroku": {
-            "framework": "silex",
-            "document-root": "public",
-            "index-document": "index.php"
-        }
-    }
+    "prefer-stable": true
+    
 }
