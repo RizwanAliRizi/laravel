@@ -1,14 +1,10 @@
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
-    Options -MultiViews -Indexes
-     RewriteEngine on #inserted
-     RewriteRule ^$ public/ [L]
-     RewriteRule (.*) public/$1 [L] #endInserted
+        Options -MultiViews -Indexes
     </IfModule>
 
-
     RewriteEngine On
-    DirectoryIndex index.php #this trick
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -17,18 +13,6 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
-
-    <VirtualHost *:80>
-    ServerName newlaravelproject.com
-    DocumentRoot "/var/www/html/models/public"
-    ServerAlias *.newlaravelproject.com
-    <Directory "/var/www/html/models/public"
-    AllowOverride All
-    Require all granted 
-    
-    </Directory>
-
-    </VirtualHost>
 
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
